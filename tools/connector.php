@@ -4,8 +4,8 @@ class Connector{
 	var $link=0;
 	var $ip="localhost";
 	var $user="root";
-	var $password="root";
-	var $db="cmbm";
+	var $password="mysql";
+	var $db="darts";
 	
 	function connect(){
 		//connect mysql
