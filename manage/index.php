@@ -13,20 +13,22 @@
 include "../tools/connector.php";
 $connector=new Connector;
 $connector->connect();
+
 //get page
-$page=$_GET['page'];
-if(empty($page)){
+$page=0;
+if(empty($_GET['page'])){
 	$page=1;
+}else{
+	$page=$_GET['page'];
 }
 $start=20*($page-1);
-$end=20*$page-1;
+
 //get total page
 $connector->query("select count(*) from record");
 list($count_record)=mysql_fetch_row($connector->result);
 $total_page=ceil($count_record/20);
 ?>
 <body onload="load();">
-<form name="form1" action="update.php" method="post">
 	<table border="1">
 		<tr>
 			<th width="12.5%">year</th>
@@ -40,7 +42,7 @@ $total_page=ceil($count_record/20);
 		</tr>
 <?php
 //lists
-$connector->query("select * from record order by year desc,month desc,day desc limit $start,$end");
+$connector->query("select * from record order by year desc,month desc,day desc limit $start,20");
 $gyo=0;
 while(list($id,$year,$month,$day,$countup,$zeroone,$cricket,$rating)=mysql_fetch_row($connector->result)){
 	$gyo++;
@@ -52,7 +54,7 @@ while(list($id,$year,$month,$day,$countup,$zeroone,$cricket,$rating)=mysql_fetch
 			<td align="right"><?php echo $day; ?></td>
 			<td align="right"><?php echo $countup; ?></td>
 			<td align="right"><?php echo $zeroone; ?></td>
-			<td align="right"><?php echo $cricekt; ?></td>
+			<td align="right"><?php echo $cricket; ?></td>
 			<td align="right"><?php echo $rating; ?></td>
 			<td align="middle">
 				<a href="delete.php?id=<?php echo $id; ?>&page=<?php echo $page; ?>">delete</a>
@@ -83,6 +85,7 @@ if($page<$total_page){
 	<br/>
 	<fieldset>
 		<legend>insert</legend>
+		<form name="form1" action="insert.php" method="post">
 		<table border="1">
 			<tr>
 				<th >year</th>
@@ -94,18 +97,18 @@ if($page<$total_page){
 				<th >rating</th>
 			</tr>
 			<tr>
-				<td><input id="year"/></td>
-				<td><input id="month"/></td>
-				<td><input id="day"/></td>
-				<td><input id="countup"/></td>
-				<td><input id="zeroone"/></td>
-				<td><input id="cricket"/></td>
-				<td><input id="rating"/></td>
+				<td><input name="year"/></td>
+				<td><input name="month"/></td>
+				<td><input name="day"/></td>
+				<td><input name="countup"/></td>
+				<td><input name="zeroone"/></td>
+				<td><input name="cricket"/></td>
+				<td><input name="rating"/></td>
 			</td>
 		</table>
 		<br/>
 		<input type="submit"/>
+		</form>
 	</fieldset>
-</form>
 </body>
 </html>
