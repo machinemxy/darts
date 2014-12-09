@@ -74,12 +74,16 @@ if($page>1){
 	<a href="index.php?page=1">first</a>
 	<a href="index.php?page=<?php echo $page-1; ?>">previous</a>
 <?php
+}else{
+	echo "first previous";
 }
 if($page<$total_page){
 ?>
 	<a href="index.php?page=<?php echo $page+1; ?>">next</a>
 	<a href="index.php?page=<?php echo $total_page; ?>">final</a>
 <?php
+}else{
+	echo "next final";
 }
 ?>
 	<br/>
