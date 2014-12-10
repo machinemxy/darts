@@ -43,5 +43,6 @@ $connector->disconnect();
 		<a href="chart/recent.php">Recent Chart</a>
 		<a href="chart/monthly.php">Monthly Chart</a>
 	</fieldset>
+	Friendly link:<a href="http://cog1.sinaapp.com/">Captain of Guerilla</a>
 </body>
 </html>
