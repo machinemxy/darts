@@ -34,12 +34,14 @@ $connector->disconnect();
 				<th width="25%">cricket</th>
 				<th width="25%">rating</th>
 			<tr>
-				<td align="center"><?php echo $countup; ?></td>
-				<td align="center"><?php echo $zeroone; ?></td>
-				<td align="center"><?php echo $cricket; ?></td>
-				<td align="center"><?php echo $rating; ?></td>
+				<td align="center"><p><?php echo $countup; ?></p></td>
+				<td align="center"><p style="color:blue"><?php echo $zeroone; ?></p></td>
+				<td align="center"><p style="color:red"><?php echo $cricket; ?></p></td>
+				<td align="center"><p style="color:green"><?php echo $rating; ?></p></td>
 			<tr>
 		</table>
+		<a href="chart/recent.php">Recent Chart</a>
+		<a href="chart/monthly.php">Monthly Chart</a>
 	</fieldset>
 </body>
 </html>
