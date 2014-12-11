@@ -40,8 +40,9 @@ $connector->disconnect();
 				<td align="center"><p style="color:green"><?php echo $rating; ?></p></td>
 			<tr>
 		</table>
-		<a href="chart/recent.php">Recent Chart</a>
-		<a href="chart/monthly.php">Monthly Chart</a>
+		<br/>
+		<a href="chart/recent.php"><img src="img/chart.png" width="2%"/>Recent Chart</a>
+		<a href="chart/monthly.php"><img src="img/chart.png" width="2%"/>Monthly Chart</a>
 	</fieldset>
 	Friendly link:<a href="http://cog1.sinaapp.com/">Captain of Guerilla</a>
 </body>
