@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.8
+-- version 3.3.8.1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: 2014-12-09 13:51:39
--- 服务器版本： 5.6.20
--- PHP Version: 5.3.29
+-- ホスト: w.rdc.sae.sina.com.cn:3307
+-- 生成時間: 2014 年 12 月 16 日 13:04
+-- サーバのバージョン: 5.5.23
+-- PHP のバージョン: 5.3.3
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -17,28 +16,30 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `darts`
+-- データベース: `app_darts`
 --
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `record`
+-- テーブルの構造 `record`
 --
 
 CREATE TABLE IF NOT EXISTS `record` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `year` int(4) NOT NULL,
   `month` int(2) NOT NULL,
   `day` int(2) NOT NULL,
   `countup` decimal(6,2) NOT NULL,
   `zeroone` decimal(5,2) NOT NULL,
   `cricket` decimal(3,2) NOT NULL,
-  `rating` decimal(4,2) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=latin1;
+  `rating` decimal(4,2) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `date` (`year`,`month`,`day`)
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=57 ;
 
 --
--- 转存表中的数据 `record`
+-- テーブルのデータをダンプしています `record`
 --
 
 INSERT INTO `record` (`id`, `year`, `month`, `day`, `countup`, `zeroone`, `cricket`, `rating`) VALUES
@@ -91,27 +92,8 @@ INSERT INTO `record` (`id`, `year`, `month`, `day`, `countup`, `zeroone`, `crick
 (48, 2014, 11, 30, 606.31, 77.45, 2.73, 9.40),
 (49, 2014, 12, 3, 591.87, 77.57, 2.69, 9.37),
 (50, 2014, 12, 5, 597.14, 77.71, 2.73, 9.44),
-(51, 2014, 12, 7, 618.69, 78.04, 2.77, 9.54);
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `record`
---
-ALTER TABLE `record`
- ADD PRIMARY KEY (`id`), ADD UNIQUE KEY `date` (`year`,`month`,`day`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `record`
---
-ALTER TABLE `record`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=52;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+(51, 2014, 12, 7, 618.69, 78.04, 2.77, 9.54),
+(52, 2014, 12, 11, 629.87, 78.76, 2.75, 9.62),
+(53, 2014, 12, 12, 627.94, 80.66, 2.76, 9.91),
+(55, 2014, 12, 15, 642.79, 80.88, 2.70, 9.85),
+(56, 2014, 12, 16, 626.52, 80.88, 2.80, 9.98);
