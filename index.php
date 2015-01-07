@@ -26,7 +26,7 @@ $connector->disconnect();
 <body>
 	<h1>Cecil Ma's Darts Website</h1>
 	<fieldset>
-		<legend>Cecil Ma's real-time rating</legend>
+		<legend>Real-Time Rating</legend>
 		<table border="1">
 			<tr>
 				<th width="25%">count-up</th>
@@ -44,6 +44,12 @@ $connector->disconnect();
 		<a href="chart/recent.php"><img src="img/chart.png" width="2%"/>Recent Chart</a>
 		<a href="chart/monthly.php"><img src="img/chart.png" width="2%"/>Monthly Chart</a>
 	</fieldset>
+	<br/>
+	<fieldset>
+		<legend>Articles</legend>
+		<a href="article/001.php">How I started playing darts(1)</a>
+	</fieldset>
+	<br/>
 	Friendly link:<a href="http://cog1.sinaapp.com/">Captain of Guerilla</a>
 </body>
 </html>

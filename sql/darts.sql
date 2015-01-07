@@ -3,7 +3,11 @@
 -- http://www.phpmyadmin.net
 --
 -- ホスト: w.rdc.sae.sina.com.cn:3307
+<<<<<<< Updated upstream
 -- 生成時間: 2014 年 12 月 16 日 13:04
+=======
+-- 生成時間: 2015 年 1 月 07 日 19:20
+>>>>>>> Stashed changes
 -- サーバのバージョン: 5.5.23
 -- PHP のバージョン: 5.3.3
 
@@ -36,7 +40,11 @@ CREATE TABLE IF NOT EXISTS `record` (
   `rating` decimal(4,2) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `date` (`year`,`month`,`day`)
+<<<<<<< Updated upstream
 ) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=57 ;
+=======
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=65 ;
+>>>>>>> Stashed changes
 
 --
 -- テーブルのデータをダンプしています `record`
@@ -96,4 +104,15 @@ INSERT INTO `record` (`id`, `year`, `month`, `day`, `countup`, `zeroone`, `crick
 (52, 2014, 12, 11, 629.87, 78.76, 2.75, 9.62),
 (53, 2014, 12, 12, 627.94, 80.66, 2.76, 9.91),
 (55, 2014, 12, 15, 642.79, 80.88, 2.70, 9.85),
+<<<<<<< Updated upstream
 (56, 2014, 12, 16, 626.52, 80.88, 2.80, 9.98);
+=======
+(56, 2014, 12, 16, 626.52, 80.88, 2.80, 9.98),
+(57, 2014, 12, 17, 618.50, 80.88, 2.78, 9.95),
+(58, 2014, 12, 19, 622.64, 81.12, 2.76, 9.95),
+(59, 2014, 12, 21, 600.10, 80.59, 2.78, 9.91),
+(60, 2014, 12, 25, 611.82, 81.85, 2.80, 10.12),
+(61, 2014, 12, 28, 606.69, 81.19, 2.80, 10.03),
+(62, 2014, 12, 31, 620.88, 81.43, 2.80, 10.06),
+(64, 2015, 1, 2, 633.59, 81.43, 2.80, 10.06);
+>>>>>>> Stashed changes
