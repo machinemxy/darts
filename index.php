@@ -50,6 +50,8 @@ $connector->disconnect();
 		<a href="article/001.php">How I started playing darts(1)</a>
 	</fieldset>
 	<br/>
+	Connect with me: machinemxy@126.com
+	<br/>
 	Friendly link:<a href="http://cog1.sinaapp.com/">Captain of Guerilla</a>
 </body>
 </html>
