@@ -48,6 +48,8 @@ $connector->disconnect();
 	<fieldset>
 		<legend>Articles</legend>
 		<a href="article/001.php">How I started playing darts(1)</a>
+		<br/>
+		<a href="article/002.php">How I started playing darts(2)</a>
 	</fieldset>
 	<br/>
 	Connect with me: machinemxy@126.com
