@@ -2,10 +2,10 @@
 -- version 3.3.8.1
 -- http://www.phpmyadmin.net
 --
--- ホスト: w.rdc.sae.sina.com.cn:3307
--- 生成時間: 2015 年 2 月 02 日 08:56
--- サーバのバージョン: 5.5.23
--- PHP のバージョン: 5.3.3
+-- 主机: w.rdc.sae.sina.com.cn:3307
+-- 生成日期: 2015 年 04 月 04 日 15:21
+-- 服务器版本: 5.5.23
+-- PHP 版本: 5.3.3
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -16,13 +16,32 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- データベース: `app_darts`
+-- 数据库: `app_darts`
 --
 
 -- --------------------------------------------------------
 
 --
--- テーブルの構造 `record`
+-- 表的结构 `comment`
+--
+
+CREATE TABLE IF NOT EXISTS `comment` (
+  `article_id` int(3) NOT NULL,
+  `nickname` varchar(15) NOT NULL,
+  `email` varchar(30) DEFAULT NULL,
+  `comment` text NOT NULL,
+  KEY `article_id` (`article_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- 转存表中的数据 `comment`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `record`
 --
 
 CREATE TABLE IF NOT EXISTS `record` (
@@ -36,10 +55,10 @@ CREATE TABLE IF NOT EXISTS `record` (
   `rating` decimal(4,2) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `date` (`year`,`month`,`day`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=74 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=90 ;
 
 --
--- テーブルのデータをダンプしています `record`
+-- 转存表中的数据 `record`
 --
 
 INSERT INTO `record` (`id`, `year`, `month`, `day`, `countup`, `zeroone`, `cricket`, `rating`) VALUES
@@ -111,4 +130,20 @@ INSERT INTO `record` (`id`, `year`, `month`, `day`, `countup`, `zeroone`, `crick
 (70, 2015, 1, 22, 641.32, 82.78, 2.90, 10.40),
 (71, 2015, 1, 24, 642.16, 83.13, 2.91, 10.46),
 (72, 2015, 1, 28, 643.73, 83.35, 2.94, 10.54),
-(73, 2015, 2, 2, 647.58, 84.03, 2.94, 10.64);
+(73, 2015, 2, 2, 647.58, 84.03, 2.94, 10.64),
+(74, 2015, 2, 4, 650.41, 82.95, 3.02, 10.59),
+(75, 2015, 2, 12, 658.28, 83.46, 3.00, 10.63),
+(76, 2015, 2, 15, 659.60, 81.26, 3.02, 10.35),
+(77, 2015, 2, 19, 646.40, 84.81, 3.02, 10.85),
+(78, 2015, 2, 20, 651.68, 85.55, 3.02, 10.96),
+(79, 2015, 2, 24, 647.03, 86.24, 3.00, 11.04),
+(80, 2015, 3, 1, 621.75, 86.19, 2.97, 10.99),
+(81, 2015, 3, 2, 633.59, 87.23, 2.98, 11.15),
+(82, 2015, 3, 4, 629.45, 87.61, 3.00, 11.22),
+(83, 2015, 3, 23, 639.67, 88.04, 2.96, 11.21),
+(84, 2015, 3, 25, 639.98, 88.04, 2.96, 11.21),
+(85, 2015, 3, 30, 637.46, 84.17, 3.03, 10.79),
+(86, 2015, 4, 1, 643.74, 84.17, 3.03, 10.79),
+(87, 2015, 4, 2, 652.92, 83.60, 3.14, 10.87),
+(88, 2015, 4, 3, 656.59, 83.65, 3.14, 10.88),
+(89, 2015, 4, 4, 652.86, 83.86, 3.13, 10.90);
