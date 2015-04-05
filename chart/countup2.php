@@ -36,7 +36,7 @@ $MyData = new pData();
 $MyData->addPoints($score,"count-up");
 
 //adjust color
-$serieSettings = array("R"=>0,"G"=>255,"B"=>0);
+$serieSettings = array("R"=>34,"G"=>139,"B"=>34);
 $MyData->setPalette("count-up",$serieSettings);
 $MyData->addPoints($date,"Labels");
 $MyData->setSerieDescription("Labels","Dates");

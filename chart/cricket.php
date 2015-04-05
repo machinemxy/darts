@@ -8,11 +8,11 @@
 		</div>
 		<div data-role="content">
 			<ul data-role="listview">
-				<li data-role="list-divider" style="background-color:#FF8888">01 Game</li>
+				<li data-role="list-divider" style="background-color:#77DDFF">Cricket</li>
 			</ul>
 			<p>最近</p>
-			<p><img width="100%" src="zeroone1.php"/></p>
+			<p><img width="100%" src="cricket1.php"/></p>
 			<p>每月</p>
-			<p><img width="100%" src="zeroone2.php"/></p>
+			<p><img width="100%" src="cricket2.php"/></p>
 		</div>
 <?php require "../common/footer.php"; ?>

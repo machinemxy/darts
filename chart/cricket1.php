@@ -24,7 +24,7 @@ $MyData = new pData();
 $MyData->addPoints($score,"cricket");
 
 //adjust color
-$serieSettings = array("R"=>255,"G"=>0,"B"=>0);
+$serieSettings = array("R"=>11,"G"=>11,"B"=>229);
 $MyData->setPalette("cricket",$serieSettings);
 $MyData->addPoints($date,"Labels");
 $MyData->setSerieDescription("Labels","Dates");
