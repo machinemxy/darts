@@ -36,7 +36,7 @@ $MyData = new pData();
 $MyData->addPoints($score,"rating");
 
 //adjust color
-$serieSettings = array("R"=>0,"G"=>255,"B"=>0);
+$serieSettings = array("R"=>218,"G"=>165,"B"=>32);
 $MyData->setPalette("rating",$serieSettings);
 $MyData->addPoints($date,"Labels");
 $MyData->setSerieDescription("Labels","Dates");
