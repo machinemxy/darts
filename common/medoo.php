@@ -14,14 +14,14 @@ class medoo
 
 	protected $charset="utf8";
 
-	protected $database_name="darts";
+	protected $database_name=SAE_MYSQL_DB;
 
 	// For MySQL, MariaDB, MSSQL, Sybase, PostgreSQL, Oracle
-	protected $server="localhost";
+	protected $server=SAE_MYSQL_HOST_M;
 
-	protected $username="root";
+	protected $username=SAE_MYSQL_USER;
 
-	protected $password="mysql";
+	protected $password=SAE_MYSQL_PASS;
 
 	// For SQLite
 	protected $database_file;
@@ -30,7 +30,7 @@ class medoo
 	protected $socket;
 
 	// Optional
-	protected $port;
+	protected $port=SAE_MYSQL_PORT;
 
 	protected $option = array();
 

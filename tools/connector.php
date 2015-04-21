@@ -2,14 +2,14 @@
 class Connector{
 	var $result="";
 	var $link=0;
-	var $ip="localhost";
-	var $user="root";
-	var $password="mysql";
-	var $db="darts";
+	var $ip=SAE_MYSQL_HOST_M;
+	var $user=SAE_MYSQL_USER;
+	var $password=SAE_MYSQL_PASS;
+	var $db=SAE_MYSQL_DB;
 	
 	function connect(){
 		//connect mysql
-		$this->link=mysql_connect($this->ip,$this->user,$this->password);
+		$this->link=mysql_connect($this->ip.":".SAE_MYSQL_PORT,$this->user,$this->password);
 		if(!$this->link){
 			die("connect failed");
 		}

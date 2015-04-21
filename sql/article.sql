@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.8
+-- version 3.3.8.1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: 2015-04-05 06:27:20
--- 服务器版本： 5.6.20
--- PHP Version: 5.3.29
+-- ホスト: w.rdc.sae.sina.com.cn:3307
+-- 生成時間: 2015 年 4 月 21 日 15:12
+-- サーバのバージョン: 5.5.23
+-- PHP のバージョン: 5.3.3
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
@@ -17,24 +16,25 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `darts`
+-- データベース: `app_darts`
 --
 
 -- --------------------------------------------------------
 
 --
--- 表的结构 `article`
+-- テーブルの構造 `article`
 --
 
 CREATE TABLE IF NOT EXISTS `article` (
-`id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(100) COLLATE utf8_bin NOT NULL,
   `date` varchar(10) COLLATE utf8_bin NOT NULL,
-  `url` varchar(100) COLLATE utf8_bin NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+  `url` varchar(100) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=11 ;
 
 --
--- 转存表中的数据 `article`
+-- テーブルのデータをダンプしています `article`
 --
 
 INSERT INTO `article` (`id`, `title`, `date`, `url`) VALUES
@@ -48,26 +48,3 @@ INSERT INTO `article` (`id`, `title`, `date`, `url`) VALUES
 (8, 'How I started playing darts(2)', '2015-01-13', 'http://blog.sina.com.cn/s/blog_4b57dc160102vk3o.html'),
 (9, 'Darts in Japan(1)', '2015-01-22', 'http://blog.sina.com.cn/s/blog_4b57dc160102vkxf.html'),
 (10, '记一位日本的飞镖爷爷', '2015-02-23', 'http://blog.sina.com.cn/s/blog_4b57dc160102vopx.html');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `article`
---
-ALTER TABLE `article`
- ADD PRIMARY KEY (`id`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `article`
---
-ALTER TABLE `article`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=11;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
