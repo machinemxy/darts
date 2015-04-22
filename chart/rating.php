@@ -11,9 +11,9 @@
 				<li data-role="list-divider" style="background-color:#FFFF77">Rating</li>
 			</ul>
 			<p>最近</p>
-			<p><img width="100%" src="rating1.php"/></p>
+			<p><img width="100%" src="../controller/chart_controller.php?spanType=1&gameType=4"/></p>
 			<p>每月</p>
-			<p><img width="100%" src="rating2.php"/></p>
+			<p><img width="100%" src="../controller/chart_controller.php?spanType=2&gameType=4"/></p>
 		</div>
 		<div data-role="footer">
 			<p>联系方式</p>

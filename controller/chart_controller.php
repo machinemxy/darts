@@ -36,31 +36,40 @@ if($_GET['spanType']==1){
 		array_push($dates,$data['month'].'/'.$data['day']);
 	}
 }else{
-
+	$r_lastDays=$database->query("select year,month,max(day) day from record group by year,month order by year desc,month desc limit 0,20")->fetchAll();
+	$lastDays=array_reverse($r_lastDays);
+	foreach($lastDays as $lastDay){
+		$score=$database->get(
+			"record",
+			$dbName,
+			array(
+				"AND"=>array(
+					"year"=>$lastDay['year'],
+					"month"=>$lastDay['month'],
+					"day"=>$lastDay['day']
+				)
+			)
+		);
+		array_push($scores,$score);
+		array_push($dates,$lastDay['year'].'/'.$lastDay['month']);
+	}
 }
-
-//get data for chart
-$database=new medoo();
-$connector->query("select year,month,day,countup from record order by year desc,month desc,day desc limit 0,20");
-$r_date=array();
-$r_score=array();
-while(list($year,$month,$day,$countup)=mysql_fetch_row($connector->result)){
-	array_push($r_date,$month."/".$day);
-	array_push($r_score,$countup);
-}
-$date=array_reverse($r_date);
-$score=array_reverse($r_score);
-
-$connector->disconnect();
 
 /* Create and populate the pData object */
 $MyData = new pData();  
-$MyData->addPoints($score,"count-up");
+$MyData->addPoints($scores,$lbName);
 
 //adjust color
 $serieSettings = array("R"=>34,"G"=>139,"B"=>34);
-$MyData->setPalette("count-up",$serieSettings);
-$MyData->addPoints($date,"Labels");
+if($_GET['gameType']==2){
+	$serieSettings = array("R"=>255,"G"=>0,"B"=>0);
+}elseif($_GET['gameType']==3){
+	$serieSettings = array("R"=>11,"G"=>11,"B"=>229);
+}elseif($_GET['gameType']==4){
+	$serieSettings = array("R"=>218,"G"=>165,"B"=>32);
+}
+$MyData->setPalette($lbName,$serieSettings);
+$MyData->addPoints($dates,"Labels");
 $MyData->setSerieDescription("Labels","Dates");
 $MyData->setAbscissa("Labels");
 

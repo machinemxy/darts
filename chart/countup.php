@@ -11,8 +11,8 @@
 				<li data-role="list-divider" style="background-color:#66FF66">Count Up</li>
 			</ul>
 			<p>最近</p>
-			<p><img width="100%" src="countup1.php"/></p>
+			<p><img width="100%" src="../controller/chart_controller.php?spanType=1&gameType=1"/></p>
 			<p>每月</p>
-			<p><img width="100%" src="countup2.php"/></p>
+			<p><img width="100%" src="../controller/chart_controller.php?spanType=2&gameType=1"/></p>
 		</div>
 <?php require "../common/footer.php"; ?>
