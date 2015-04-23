@@ -3,7 +3,7 @@
 <body>
 	<div data-role="page">
 		<div data-role="header">
-			<a href="#" data-rel="back" data-icon="arrow-l" data-iconpos="notext">aa</a>
+			<a href="#" data-rel="back" data-icon="arrow-l" data-iconpos="notext"></a>
 			<h1>小马飞镖</h1>
 		</div>
 		<div data-role="content">
@@ -15,11 +15,4 @@
 			<p>每月</p>
 			<p><img width="100%" src="../controller/chart_controller.php?spanType=2&gameType=4"/></p>
 		</div>
-		<div data-role="footer">
-			<p>联系方式</p>
-			<p>邮箱:machinemxy@126.com</p>
-			<p>微信公众号:xiaoma_darts</p>
-		</div>
-	</div>
-</body>
-</html>
+<?php require "../common/footer.php"; ?>
