@@ -5,7 +5,7 @@
 	<div data-role="page">
 		<div data-role="header">
 			<h1>小马飞镖</h1>
-			<a href="#" rel="external" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
+			<a href="../manage/login.php" rel="external" data-icon="gear" data-iconpos="notext" class="ui-btn-right"></a>
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#" class="ui-btn-active">数据</a></li>

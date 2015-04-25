@@ -1,0 +1,9 @@
+<?php
+session_start();
+if($_POST['password']=="1234"){
+	$_SESSION['verified']=true;
+	header("Location:../manage/list.php");
+}else{
+	header("Location:../manage/error.php");
+}
+?>
