@@ -7,7 +7,7 @@
 			<h1>小马飞镖</h1>
 		</div>
 		<div data-role="content">
-			<form method="post" action="../proccess/login_proccess.php">
+			<form method="post" action="login_proccess.php">
 			<div data-role="fieldcontain">
 				<label for="password">管理密码</label>
 				<input type="password" name="password" id="password" />

@@ -1,5 +1,5 @@
 <?php require "../common/header.php"; ?>
-<?php require "../proccess/home_proccess.php"; ?>
+<?php require "home_proccess.php"; ?>
 </head>
 <body>
 	<div data-role="page">

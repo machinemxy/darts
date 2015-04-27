@@ -1,5 +1,5 @@
 <?php require "../common/verify.php"; ?>
-<?php require "../proccess/list_proccess.php"; ?>
+<?php require "list_proccess.php"; ?>
 <?php require "../common/header.php"; ?>
 </head>
 <body>
@@ -7,7 +7,7 @@
 <div data-role="header">
 <a href="../home/index.php" rel="external" data-icon="home" data-iconpos="notext"></a>
 <h1>小马飞镖</h1>
-<a href="../manage/insert.php" rel="external" data-icon="plus" data-iconpos="notext"></a>
+<a href="insert.php" rel="external" data-icon="plus" data-iconpos="notext"></a>
 </div>
 <div data-role="content">
 	<ul data-role="listview" data-split-icon="delete">
@@ -15,7 +15,7 @@
 foreach($datas as $data){
 ?>
 		<li>
-			<a href="../manage/modify.php?id=<?php echo $data['id']; ?>" rel="external">
+			<a href="modify.php?id=<?php echo $data['id']; ?>" rel="external">
 				<h3>
 					<?php echo $data['year']."/".$data['month']."/".$data['day']; ?>
 				</h3>
@@ -26,7 +26,7 @@ foreach($datas as $data){
 					rating:<?php echo $data['rating']; ?><br/>
 				</p>
 			</a>
-			<a href="../manage/delete.php?id=<?php echo $data['id']; ?>" rel="external"></a>
+			<a href="delete_proccess.php?id=<?php echo $data['id']; ?>" rel="external"></a>
 		</li>
 <?php
 }
@@ -44,8 +44,8 @@ if($page==1){
 <?php
 }else{
 ?>
-		<a href="../manage/list.php?page=1" data-role="button" rel="external">首页</a>
-		<a href="../manage/list.php?page=<?php echo $page-1; ?>" data-role="button" rel="external">上一页</a>
+		<a href="list.php?page=1" data-role="button" rel="external">首页</a>
+		<a href="list.php?page=<?php echo $page-1; ?>" data-role="button" rel="external">上一页</a>
 <?php
 }
 if($page==$totalPage){
@@ -55,8 +55,8 @@ if($page==$totalPage){
 <?php
 }else{
 ?>
-		<a href="../manage/list.php?page=<?php echo $page+1; ?>" data-role="button" rel="external">下一页</a>
-		<a href="../manage/list.php?page=<?php echo $totalPage; ?>" data-role="button" rel="external">末页</a>
+		<a href="list.php?page=<?php echo $page+1; ?>" data-role="button" rel="external">下一页</a>
+		<a href="list.php?page=<?php echo $totalPage; ?>" data-role="button" rel="external">末页</a>
 <?php
 }
 ?>

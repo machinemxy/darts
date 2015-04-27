@@ -11,8 +11,8 @@
 				<li data-role="list-divider" style="background-color:#FF8888">01 Game</li>
 			</ul>
 			<p>最近</p>
-			<p><img width="100%" src="../proccess/chart_proccess.php?spanType=1&gameType=2"/></p>
+			<p><img width="100%" src="chart_proccess.php?spanType=1&gameType=2"/></p>
 			<p>每月</p>
-			<p><img width="100%" src="../proccess/chart_proccess.php?spanType=2&gameType=2"/></p>
+			<p><img width="100%" src="chart_proccess.php?spanType=2&gameType=2"/></p>
 		</div>
 <?php require "../common/footer.php"; ?>
