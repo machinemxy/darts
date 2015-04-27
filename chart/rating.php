@@ -11,8 +11,8 @@
 				<li data-role="list-divider" style="background-color:#FFFF77">Rating</li>
 			</ul>
 			<p>最近</p>
-			<p><img width="100%" src="../controller/chart_controller.php?spanType=1&gameType=4"/></p>
+			<p><img width="100%" src="../proccess/chart_proccess.php?spanType=1&gameType=4"/></p>
 			<p>每月</p>
-			<p><img width="100%" src="../controller/chart_controller.php?spanType=2&gameType=4"/></p>
+			<p><img width="100%" src="../proccess/chart_proccess.php?spanType=2&gameType=4"/></p>
 		</div>
 <?php require "../common/footer.php"; ?>

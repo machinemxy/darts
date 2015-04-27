@@ -6,5 +6,4 @@ $articles=$database->select(
 	array("title","date","url"),
 	array("ORDER"=>"id DESC")
 );
-print_r($articles)
 ?>

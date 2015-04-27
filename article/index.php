@@ -1,5 +1,5 @@
 <?php require "../common/header.php"; ?>
-<?php require "../controller/article_controller.php"; ?>
+<?php require "../proccess/article_proccess.php"; ?>
 </head>
 <body>
 	<div data-role="page">

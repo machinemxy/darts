@@ -1,5 +1,5 @@
 <?php require "../common/verify.php"; ?>
-<?php require "../controller/list_controller.php"; ?>
+<?php require "../proccess/list_proccess.php"; ?>
 <?php require "../common/header.php"; ?>
 </head>
 <body>
