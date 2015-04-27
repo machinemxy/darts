@@ -12,7 +12,7 @@
 				<label for="password">管理密码</label>
 				<input type="password" name="password" id="password" />
 			</div>
-			<input type="submit" data-inline="true" value="提交"/>
+			<input type="submit" data-inline="true" value="确定"/>
 			</form>
 		</div>
 <?php require "../common/footer.php"; ?>
