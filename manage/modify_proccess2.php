@@ -2,7 +2,7 @@
 require "../common/verify.php";
 require "../common/medoo.php";
 $database=new medoo();
-$data=$database->update(
+$database->update(
 	"record",
 	array(
 		"year"=>$_POST['year'],
