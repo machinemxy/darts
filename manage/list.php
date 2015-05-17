@@ -40,22 +40,22 @@ foreach($datas as $data){
 if($page==1){
 ?>
 		<a href="#" data-role="button" rel="external" style="color:grey;">首页</a>
-		<a href="#" data-role="button" rel="external" style="color:grey;">上一页</a>
+		<a href="#" data-role="button" rel="external" style="color:grey;">上页</a>
 <?php
 }else{
 ?>
 		<a href="list.php?page=1" data-role="button" rel="external">首页</a>
-		<a href="list.php?page=<?php echo $page-1; ?>" data-role="button" rel="external">上一页</a>
+		<a href="list.php?page=<?php echo $page-1; ?>" data-role="button" rel="external">上页</a>
 <?php
 }
 if($page==$totalPage){
 ?>
-		<a href="#" data-role="button" rel="external" style="color:grey;">下一页</a>
+		<a href="#" data-role="button" rel="external" style="color:grey;">下页</a>
 		<a href="#" data-role="button" rel="external" style="color:grey;">末页</a>
 <?php
 }else{
 ?>
-		<a href="list.php?page=<?php echo $page+1; ?>" data-role="button" rel="external">下一页</a>
+		<a href="list.php?page=<?php echo $page+1; ?>" data-role="button" rel="external">下页</a>
 		<a href="list.php?page=<?php echo $totalPage; ?>" data-role="button" rel="external">末页</a>
 <?php
 }

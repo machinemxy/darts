@@ -2,10 +2,10 @@
 -- version 3.3.8.1
 -- http://www.phpmyadmin.net
 --
--- ホスト: w.rdc.sae.sina.com.cn:3307
--- 生成時間: 2015 年 4 月 21 日 15:12
--- サーバのバージョン: 5.5.23
--- PHP のバージョン: 5.3.3
+-- 主机: w.rdc.sae.sina.com.cn:3307
+-- 生成日期: 2015 年 05 月 17 日 12:48
+-- 服务器版本: 5.5.23
+-- PHP 版本: 5.3.3
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 
@@ -16,13 +16,86 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 /*!40101 SET NAMES utf8 */;
 
 --
--- データベース: `app_darts`
+-- 数据库: `app_darts`
 --
 
 -- --------------------------------------------------------
 
 --
--- テーブルの構造 `record`
+-- 表的结构 `article`
+--
+
+CREATE TABLE IF NOT EXISTS `article` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) COLLATE utf8_bin NOT NULL,
+  `date` varchar(10) COLLATE utf8_bin NOT NULL,
+  `url` varchar(100) COLLATE utf8_bin NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 COLLATE=utf8_bin AUTO_INCREMENT=27 ;
+
+--
+-- 转存表中的数据 `article`
+--
+
+INSERT INTO `article` (`id`, `title`, `date`, `url`) VALUES
+(22, 'Darts in Japan(1)', '2015/01/22', 'http://blog.sina.com.cn/s/blog_4b57dc160102vkxf.html'),
+(14, '飞镖小记', '2014/08/02', 'http://blog.sina.com.cn/s/blog_4b57dc160102uzxg.html'),
+(15, '飞镖小记2', '2014/09/13', 'http://blog.sina.com.cn/s/blog_4b57dc160102v3ax.html'),
+(16, '我的迷茫', '2014/10/17', 'http://blog.sina.com.cn/s/blog_4b57dc160102v7d5.html'),
+(17, '小马飞镖教学之飞镖的选择', '2014/10/28', 'http://blog.sina.com.cn/s/blog_4b57dc160102v9c2.html'),
+(18, '飞镖收藏', '2014/11/03', 'http://blog.sina.com.cn/s/blog_4b57dc160102v9sl.html'),
+(19, '飞镖小记3', '2014/11/13', 'http://blog.sina.com.cn/s/blog_4b57dc160102vamy.html'),
+(20, 'How I started playing darts(1)', '2015/01/07', 'http://blog.sina.com.cn/s/blog_4b57dc160102vjnx.html'),
+(21, 'How I started playing darts(2)', '2015/01/13', 'http://blog.sina.com.cn/s/blog_4b57dc160102vk3o.html'),
+(23, '记一位日本的飞镖爷爷', '2015/02/23', 'http://www.jianshu.com/p/0af3f69d9af3'),
+(24, '我回国后的飞镖生涯（一）', '2015/04/26', 'http://www.jianshu.com/p/f4461a4eaac8'),
+(25, '我回国后的飞镖生涯（二）', '2015/04/29', 'http://www.jianshu.com/p/5c4a532d8f11'),
+(26, '我回国后的飞镖生涯（三）', '2015/05/09', 'http://www.jianshu.com/p/cea6fa229eb1');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `league`
+--
+
+CREATE TABLE IF NOT EXISTS `league` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- 转存表中的数据 `league`
+--
+
+INSERT INTO `league` (`id`, `name`) VALUES
+(1, '上海飞镖超级联赛B');
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `match`
+--
+
+CREATE TABLE IF NOT EXISTS `match` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `score` varchar(20) DEFAULT NULL,
+  `result` int(1) DEFAULT NULL,
+  `oppponent` varchar(30) DEFAULT NULL,
+  `date` varchar(10) DEFAULT NULL,
+  `league_id` int(3) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+
+--
+-- 转存表中的数据 `match`
+--
+
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `record`
 --
 
 CREATE TABLE IF NOT EXISTS `record` (
@@ -36,10 +109,10 @@ CREATE TABLE IF NOT EXISTS `record` (
   `rating` decimal(4,2) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `date` (`year`,`month`,`day`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=97 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=112 ;
 
 --
--- テーブルのデータをダンプしています `record`
+-- 转存表中的数据 `record`
 --
 
 INSERT INTO `record` (`id`, `year`, `month`, `day`, `countup`, `zeroone`, `cricket`, `rating`) VALUES
@@ -134,4 +207,16 @@ INSERT INTO `record` (`id`, `year`, `month`, `day`, `countup`, `zeroone`, `crick
 (93, 2015, 4, 12, 641.71, 85.98, 3.14, 11.20),
 (94, 2015, 4, 15, 633.22, 85.46, 3.07, 11.02),
 (95, 2015, 4, 17, 627.44, 87.84, 3.11, 11.39),
-(96, 2015, 4, 21, 631.50, 86.14, 3.12, 11.19);
+(96, 2015, 4, 21, 631.50, 86.14, 3.12, 11.19),
+(97, 2015, 4, 22, 633.27, 84.85, 3.06, 10.92),
+(99, 2015, 4, 27, 634.15, 87.15, 3.14, 11.36),
+(100, 2015, 4, 24, 633.27, 86.23, 3.13, 11.21),
+(103, 2015, 4, 28, 645.42, 89.12, 3.12, 11.58),
+(104, 2015, 4, 29, 649.87, 89.74, 3.11, 11.64),
+(105, 2015, 5, 1, 644.56, 90.21, 3.01, 11.50),
+(106, 2015, 5, 5, 658.22, 90.51, 3.01, 11.55),
+(107, 2015, 5, 6, 658.22, 89.54, 3.00, 11.40),
+(108, 2015, 5, 8, 653.71, 88.97, 3.07, 11.44),
+(109, 2015, 5, 12, 665.52, 92.71, 3.26, 12.27),
+(110, 2015, 5, 13, 666.05, 90.87, 3.30, 12.11),
+(111, 2015, 5, 16, 673.54, 89.67, 3.21, 11.79);

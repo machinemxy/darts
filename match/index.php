@@ -1,5 +1,5 @@
 <?php require "../common/header.php"; ?>
-<?php require "article_proccess.php"; ?>
+<?php require "match_proccess.php"; ?>
 </head>
 <body>
 	<div data-role="page">
@@ -9,20 +9,33 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="../home/index.php" rel="external">数据</a></li>
-					<li><a href="../match/index.php" rel="external">战绩</a></li>
-					<li><a href="#" class="ui-btn-active">文章</a></li>
+					<li><a href="#" class="ui-btn-active">战绩</a></li>
+					<li><a href="../article/index.php" rel="external">文章</a></li>
 				</ul>
 			</div>
 		</div>
 		<div data-role="content">
 			<ul data-role="listview" data-split-icon="delete">
-<?php foreach($articles as $article){ ?>
+<?php
+foreach($matches as $match){
+?>
 				<li>
-					<a href="<?php echo $article['url']; ?>" rel="external">
-						<h1><?php echo $article["title"]; ?></h1>
-						<p><?php echo $article["date"]; ?></p>
+					<a href="modify.php?id=<?php echo $match['id']; ?>" rel="external">
+						<h3>
+<?php
+if($match['result']==1){
+	echo "<font style='color:red'>胜（".$match['score']."）</font>";
+}elseif($match['result']==0){
+	echo "<font style='color:blue'>负（".$match['score']."）</font>";
+}else{
+	echo "平（".$match['score']."）";
+}
+echo "对阵 ".$match['opponent'];
+?>
+						</h3>
+						<p><?php echo $match['date']." ".$match['name']; ?></p>
 					</a>
-					<a href="delete_comfirm.php?id=<?php echo $article['id']; ?>" rel="external"></a>
+					<a href="delete.php?id=<?php echo $match['id']; ?>" rel="external"></a>
 				</li>
 <?php } ?>
 			</ul>

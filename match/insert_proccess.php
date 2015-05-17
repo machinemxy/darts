@@ -3,11 +3,13 @@ require "../common/medoo.php";
 if($_POST['password']=="1234"){
 	$database=new medoo();
 	$database->insert(
-		"article",
+		"match",
 		array(
-			"title"=>$_POST['title'],
+			"score"=>$_POST['score'],
+			"result"=>$_POST['result'],
+			"opponent"=>$_POST['opponent'],
 			"date"=>$_POST['date'],
-			"url"=>$_POST['url']
+			"league_id"=>$_POST['league']
 		)
 	);
 }

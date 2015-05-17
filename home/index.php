@@ -9,7 +9,8 @@
 			<div data-role="navbar">
 				<ul>
 					<li><a href="#" class="ui-btn-active">数据</a></li>
-					<li><a href="../article/index.php" rel="external">日记</a></li>
+					<li><a href="../match/index.php" rel="external">战绩</a></li>
+					<li><a href="../article/index.php" rel="external">文章</a></li>
 				</ul>
 			</div>
 		</div>
